@@ -1,0 +1,90 @@
+<h1 class="heading">
+    <span>L</span>
+    <span>À</span>
+    <span>M</span>
+    <span class="space"></span>
+    <span>T</span>
+    <span>R</span>
+    <span>Ắ</span>
+    <span>C</span>
+    <span class="space"></span>
+    <span>N</span>
+    <span>G</span>
+    <span>H</span>
+    <span>I</span>
+    <span>Ệ</span>
+    <span>M</span>
+  </h1>
+<div class="container" style="height: 500px; width: 1230px;">
+    <div class="row">
+        <div class="col">
+            <!-- Chưa thi -->
+            <div class="card text-center" ng-if="inProgress == 0">
+                <div class="card-header">
+                    <p class="fs-4 fw-bold">{{name}}</p>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div>
+                            <img src="/images/{{logo}}" width="400" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+
+                    <button class="btn btn-primary" ng-click="test();">Bắt đầu làm bài</button>
+                </div>
+            </div>
+            <!-- Thi -->
+            <div class="card" ng-if="inProgress == 1" ng-repeat="quiz in dsCauHoi | limitTo: 1 : begin">
+                <div class="card-header d-flex justify-content-between">
+
+                    <div>{{quiz.Name}}</div>
+                    <div>
+                        <span ng-if="mm < 10">0</span>{{mm}} :
+                        <span ng-if="ss < 10">0</span>{{ss}} </span>
+                    </div>
+
+
+                </div>
+                <div class="card-body">
+                    Câu {{begin + 1}}: {{quiz.Text}} 
+                    <hr>
+                    <div class="radio" ng-repeat="answer in quiz.Answers">
+                        <label>
+                            <input type="radio" class="custom-control-input" value="{{answer.Id}}"
+                                ng-checked="answerId=={{answer.Id}}" ng-change="addAnswer(begin, {{answer.Id}})"
+                                ng-model="answerId" name="answer"> {{answer.Text}}
+                        </label>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <div>
+                        <button class="btn btn-primary" ng-click="prev()">Prev</button>
+                        <button class="btn btn-primary pull-right" ng-click="next()">Next</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-danger pull-right" ng-click="submit()">Kết
+                            thúc</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Kết thúc thi -->
+            <div>
+                <div ng-if="inProgress == 2" class="card text-center" style="margin-top: 150px; border: none;">
+
+                    <div class="card-body">
+                        <img ng-show="{{mark}} >= 5" src="images/background_check.jpg" height="450px" width="350px" alt="">
+                        <img ng-show="{{mark}} < 5" src="images/background_fail.png" height="450px" width="350px" alt="">
+                        <h3>Bạn trả lời được {{mark}} / 10 câu hỏi</h3>
+                    </div>
+
+                    <div class="card-fotter">
+                        <button class="btn btn-primary" ng-click="start(); batdau();">Làm lại</button>
+                        <button class="btn btn-success" ng-click="thongbao();">Xem kết quả</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

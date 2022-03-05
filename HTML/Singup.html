@@ -1,0 +1,140 @@
+
+    <section class="form">
+    <div class="container">
+        
+            <div class="row g-0 bg-light my-5 mx-5 ">
+                <!-- Hình -->
+                <!-- <div class="col-lg-5 ps-0">
+                     <img src="images/background_formdk.jpg" alt="logo" class="img-fluid ">
+                </div> -->
+                <!-- ////-->
+                <div class="col-lg-7 px-5 pt-2">
+                    <form >
+
+                            <h1 class="fs-2  fw-bold my-1 text-center">
+                                ĐĂNG KÝ
+                            </h1>
+                            <h5 class="fs-5 text-center"></h5>
+                            <div class="form-row ">
+                                <div class=" offset-1 col-lg-10" >
+                                    <div class="input-group ">
+                                    
+                                    <span class="input-group-text" >
+                                        
+                                        <i class="fas fa-user" style="width:16px; height:16px;"> </i>
+                                    </span>
+                                    
+                                    <input type="text" ng-model="username" name="txtUsername"  class="form-control "  placeholder="Tên đăng nhập">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="offset-1 col-lg-10">
+                                    <div class="input-group mt-3">
+                                        <span class="input-group-text " >
+                                            <i class="fas fa-envelope" style="width:16px; height:16px;"> </i>
+                                                            
+                                        </span>
+                                        <input type="email" ng-model="email" name="txtEmail"  class="form-control " placeholder="Email">
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>    
+                                
+                            <div class="form-row">
+                                <div class="offset-1 col-lg-10">
+                                    <div class="input-group mt-3">
+                                        <span class="input-group-text " >
+                                            <i class="fas fa-user" style="width:16px; height:16px;"> </i>
+                                                            
+                                        </span>
+                                        <input type="text" ng-model="fullname" name="txtFullname"  class="form-control " placeholder="Họ và tên">
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="offset-1 col-lg-10">
+                                    <div class="input-group mt-3">
+                                        <span class="input-group-text " >
+                                            <i class="fas fa-calendar-alt" style="width:16px; height:16px;"> </i>
+                                                            
+                                        </span>
+                                        <input type="datetime" ng-model="date" name="txtdate" class="form-control " >
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="offset-1 col-lg-10 mt-2">
+                                    <label class="label-form">
+                                        Giới tính:
+                                    </label>
+
+                                    <input type="radio" ng-model="gender" name="GT"id="Nam" value="true" class="ms-3">
+                                    <label class="label-form me-5" for="Nam">
+                                        Nam
+                                    </label>
+
+                                    <input type="radio" ng-model="gender" name="GT" id="Nu" value="false" >
+                                    <label class="label-form" for="Nu">
+                                        Nữ
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="offset-1 col-lg-10">
+                                    <div class="input-group mt-3">
+                                        <span class="input-group-text " >
+                                            <i class="fas fa-lock" style="width:16px; height:16px;"> </i>
+                                                            
+                                        </span>
+                                        <input type="password" ng-model="password" name=""  class="form-control " placeholder="Mật khẩu">
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="offset-1 col-lg-10">
+                                    <div class="input-group mt-3">
+                                        <span class="input-group-text " >
+                                            <i class="fas fa-lock" style="width:16px; height:16px;"> </i>
+                                                            
+                                        </span>
+                                        <input type="password" name="txtRePass" class="form-control " placeholder="Xác Nhận Mật khẩu">
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row ">
+
+                                <div class="offset-3 col-lg-7 mt-3">
+                                    <button  class="btn btn-primary btn-1 align-center px-3 fs-5" ng-click="dangKy(username,
+                                    password,
+                                    fullname,
+                                    email,
+                                    gender,
+                                    date)">
+                                        Đăng ký
+                                    </button>
+                                </div>
+                            </div>
+                            
+                    
+                    </form>
+                 </div>
+     
+            </div>
+        
+      
+    </div>
+    </section>
+

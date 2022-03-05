@@ -1,0 +1,15 @@
+<div style="height: 10px;"></div>
+<div class="card" style="width: 23rem; 
+  position: relative;
+  top:0px;">
+    <div class="card-header">
+      <h5>Danh Mục</h5>
+    </div>
+    <ul class="list-group list-group-flush" ng-controller="subjectCtrl">
+        <li class="list-group-item" ng-repeat="sj in subjects" style="padding-right: 5px;">
+            <a href="#!viewtest/{{sj.Id}}/{{sj.Name}}/{{sj.Logo}}" class="row" style="text-decoration: none;">
+              <img src="images/logos/{{sj.Logo}}" style="height: 25px;  width: 60px; position: relative; padding-right: 15px;">{{sj.Name}}
+            </a>
+          </li>
+    </ul>
+  </div>

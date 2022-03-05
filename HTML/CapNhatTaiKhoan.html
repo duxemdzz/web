@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CẬP NHẬT TÀI KHOẢN</title>
+</head>
+
+<body
+  style="width: 700px; margin: 250px; margin-left: 300px; margin-top: 20px;  background: linear-gradient(-135deg, rgb(2, 191, 248), rgb(191, 139, 233));">
+  <h1 class="heading">
+    <span>C</span>
+    <span>Ậ</span>
+    <span>P</span>
+    <span class="space"></span>
+    <span>N</span>
+    <span>H</span>
+    <span>Ậ</span>
+    <span>T</span>
+    <span class="space"></span>
+    <span>T</span>
+    <span>À</span>
+    <span>I</span>
+    <span class="space"></span>
+    <span>K</span>
+    <span>H</span>
+    <span>O</span>
+    <span>Ả</span>
+    <span>N</span>
+  </h1>
+  <div class="card" style="margin: 70px;" >
+    <div class="card-header text-center" style="background-color: aquamarine;" >
+      <h4 style="font-size: 30px; color:violet;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+          fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 20">
+          <path
+            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+          <path fill-rule="evenodd"
+            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+        </svg>
+        Cập nhật tài khoản
+      </h4>
+    </div>
+    <form name="frmUpdate" style="height: 500x; padding: 10px;">
+       <!--Họ và tên-->
+      <div>
+        <label for="fullname" class="form-label" style="font-size: 20px; font-weight: 700;">Họ và tên:</label>
+        <div class="input-group">
+          <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+              height="16" fill="currentColor" class="bi bi-person-video2" viewBox="0 0 16 16">
+              <path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+              <path
+                d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z" />
+            </svg></span>
+          <input type="text" ng-model="student.fullname" name="fullname" class="form-control" placeholder="Họ và tên" id="fullname" required maxlength="25" autofocus>     
+        </div>       
+        <small ng-show="frmUpdate.fullname.$error.required" class="form-text text-danger">Vui lòng nhập họ tên</small>
+        <small ng-show="frmUpdate.fullname.$error.maxlength" class="form-text text-danger">Không được quá 25 kí tự</small>
+      </div>
+       <!--Email-->
+      <div>
+        <label for="email" class="form-label" style="font-size: 20px; font-weight: 700;">Email:</label>
+        <div class="input-group">
+          <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+              height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+              <path
+                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+            </svg></span>
+          <input type="email" ng-model="student.email" class="form-control" placeholder="Email" id="email" required>
+        </div>
+        <small ng-show="frmUpdate.email.$error.required" class="form-text text-danger">Vui lòng nhập email</small>
+        <small ng-show="frmUpdate.email.$error.email" class="form-text text-danger">Không đúng định dạng email</small>
+      </div>
+      <!--Giới Tính-->
+      <div class="text-center mt-4 ">
+        <label class="form-label" style="font-size: 20px; font-weight: 700;">Giới tính:</label>
+        <div class="form-check form-check-inline">
+          <input ng-model="student.gender" type="radio" class="form-check-input" id="gender" name="gender" value="true" >
+          <label class="form-check-label light-blue-text" for="gender">Nam</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input ng-model="student.gender" type="radio" class="form-check-input" id="gender2" name="gender" value="false">
+          <label class="form-check-label light-blue-text" for="gender2">Nữ</label>
+      </div>
+      </div>
+       <!--Ngày sinh-->
+       <div>
+        <label for="birthday" class="form-label" style="font-size: 20px; font-weight: 700;">Ngày sinh:</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+              height="16" fill="currentColor" class="bi bi-calendar-date" viewBox="0 0 16 16">
+              <path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z" />
+              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+            </svg></span>
+          <input type="date" name="birthday" ng-model="student.birthday" class="form-control" placeholder="dd/mm/yyyy" id="birthday" required>
+        </div>
+        <small ng-show="frmUpdate.birthday.$error.required" class="form-text text-danger">Vui lòng nhập ngày sinh</small>
+        <small ng-show="frmUpdate.birthday.$error.pattern" class="form-text text-danger">Không đúng định dạng ngày</small>
+      </div>
+      <!--Học phí-->
+      <div>
+        <label for="schoolfee" class="form-label" style="font-size: 20px; font-weight: 700;">Học Phí:</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+            <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+            <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+            <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+          </svg></span>
+          <input min="2000000" type="number" name="schoolfee" ng-model="student.schoolfee" class="form-control" placeholder="Học phí" id="schoolfee" required>
+        </div>
+        <small ng-show="frmUpdate.schoolfee.$error.required" class="form-text text-danger">Vui lòng nhập học phí</small>
+        <small ng-show="!frmUpdate.schoolfee.$error.required && frmUpdate.schoolfee.$invalid" class="form-text text-danger">Học phí phải hơn 2 triệu</small>
+      </div>
+      <!--Điểm-->
+      <div>
+        <label for="mark" class="form-label" style="font-size: 20px; font-weight: 700;">Học Phí:</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
+            <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+            <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"/>
+          </svg></span>
+          <input type="text" name="mark" ng-model="student.marks" class="form-control" placeholder="Điểm" id="mark" readonly>
+        </div>
+      </div>
+       <!--Nút Cập Nhật-->
+      <div style="margin-top: 15px;" class="text-center" >
+        <button ng-click="update()" ng-disabled="frmUpdate.$invalid" class="btn btn-primary" type="submit" style="width: 350px; font-size: 20px; font-weight: 700;">CẬP
+          NHẬT</button>
+      </div>
+    </form>
+  </div>
+</body> 
+</html>

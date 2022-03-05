@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/rating.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+</head>
+
+<body ng-controller="ratingCtrl">
+    <h1 class="heading">
+        <span>Đ</span>
+        <span>Á</span>
+        <span>N</span>
+        <span>H</span>
+        <span class="space"></span>
+        <span>G</span>
+        <span>I</span>
+        <span>Á</span>
+    </h1>
+    <div class="khung text-center" style="margin-left: 420px;">
+        <div class="post" name="post">
+            <div class="text">Cảm ơn bạn đã đánh giá</div>
+            <div class="edit" name="edit">Chỉnh sửa</div>
+        </div>
+        <div class="star-widget" name="start">
+            <input type="radio" name="rate" id="rate-5">
+            <label for="rate-5" class="fa fa-star"></label>
+            <input type="radio" name="rate" id="rate-4">
+            <label for="rate-4" class="fa fa-star"></label>
+            <input type="radio" name="rate" id="rate-3">
+            <label for="rate-3" class="fa fa-star"></label>
+            <input type="radio" name="rate" id="rate-2">
+            <label for="rate-2" class="fa fa-star"></label>
+            <input type="radio" name="rate" id="rate-1">
+            <label for="rate-1" class="fa fa-star"></label>
+            <form action="#">
+                <header></header>
+                <div class="textarea">
+                    <textarea cols="30" placeholder="Mô tả trải nghiệm của bạn..." style="height: 50px;"></textarea>
+                </div>
+                <div class="btn">
+                    <button type="submit" name="sub" ng-click="rating()">Gửi phản hồi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
